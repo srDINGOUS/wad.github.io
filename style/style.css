@@ -22,6 +22,7 @@ body{
 Formatação geral do layout da pagina----------------------------------------------------------
 */
 .navbar {
+    height:100vh;
   margin-bottom: 0;
   border-radius: 0;
   height: 250px;
