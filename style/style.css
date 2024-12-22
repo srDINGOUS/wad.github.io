@@ -1,0 +1,110 @@
+:root{
+    --main-color-text: #4d4d4d;
+    --main-background-topo: linear-gradient(to right, #000000, #4d4d4d);
+    --main-background-container-title:linear-gradient(to right, #ad6da8, #00b9b0);
+    --main-background-corpo:  #0F0F0F;
+    --main-transition-time: all 200ms;
+    --main-border-radius: 15px ;
+    --background-sidnav: #DCD7C9 ;
+    /* Configuração da animaçao do cubo na tela */
+    --background-color:  radial-gradient(circle, rgb(0, 190, 181),rgb(7, 13, 88));
+}
+@media only screen and (max-device-width: 1200px) {}
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+    color: var(--background-sidnav);
+    background: var(--main-background-corpo);
+}
+/* 
+Formatação geral do layout da pagina----------------------------------------------------------
+*/
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  height: 250px;
+  
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  padding-top: 20px;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  color: var(--main-background-corpo);
+  padding-top: 20px;
+  background-color: var(--background-sidnav);
+  
+}
+/* Set black background color, white text and some padding */
+footer {
+  background: var(--main-background-corpo);
+  color: white;
+  padding: 15px;
+  height: 100px;
+}
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;} 
+} 
+/* 
+Formatação do cabeçalho----------------------------------------------------------------------
+*/
+.navbar span{
+  display: none;
+  color: var(--main-color-text);
+  font-size: 17pt;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: var(--main-transition-time);
+}
+.navbar span:hover{
+  box-shadow: 0px 0px 5px 1px rgb(230, 130, 255);
+  background-clip: text;
+  border-radius: 5px;
+}
+.navbar h1{
+  font-size: 50pt;
+  background-image: var(--main-background-container-title);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* 
+Animation header-------------------------------------------------------------------------------------
+*/
+  .progress {
+    height: 3px;
+    width: 0%;
+    background-color: #6f00d6;
+    position: fixed;
+    box-shadow: 0px -5px 20px 1px #b441ab;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+  }
+  
+  @keyframes progress {
+    to {
+      background-color: rgb(20, 255, 226);
+      width: 100%;   
+    }
+  }
+  :root * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+/* 
+------------------------------------------------------------------------------------------------------------
+*/
